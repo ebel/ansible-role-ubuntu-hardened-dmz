@@ -1,2 +1,10 @@
 ---
-# tasks file for ansible-role-ubuntu-hardened-dmz
+# configuration tasks for ubuntu_hardended_dmz
+
+- name: Delete unneeded users from OS.
+  user:
+    name: "{{item}}"
+    state: absent
+    remove: yes
+    with_items:
+      - "{{ubuntu_hardened_remove_users}}"

@@ -1,2 +1,14 @@
 ---
-# defaults file for ansible-role-ubuntu-hardened-dmz
+# defaults file for ubuntu_hardened_dmz
+
+# Users to delete from installed OS, we don't use, so don't need them
+
+ubuntu_hardened_remove_users:
+  - games
+  - gnats
+  - irc
+  - list
+  - lp
+  - news
+  - proxy
+  - sync
